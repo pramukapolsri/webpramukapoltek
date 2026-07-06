@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adat Racana Politeknik Negeri Sriwijaya</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+cursor:none;
+}
+
+body{
+
+background:#08111f;
+overflow-x:hidden;
+color:white;
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100dvh;
+
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("poto/racana.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+
+position:relative;
+overflow:hidden;
+
+animation:bgZoom 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes bgZoom{
+
+0%{
+
+background-size:cover;
+
+}
+
+100%{
+
+background-size:110%;
+
+}
+
+}
+
+/* BATIK */
+
+.batik-left,
+.batik-right{
+
+position:absolute;
+
+top:0;
+
+width:180px;
+
+height:100%;
+
+opacity:.18;
+
+pointer-events:none;
+
+background-image:
+
+radial-gradient(circle,#ffffff 2px,transparent 3px),
+radial-gradient(circle,#d6d6d6 2px,transparent 3px),
+radial-gradient(circle,#c0c0c0 2px,transparent 3px);
+
+background-size:60px 60px;
+
+animation:batikMove 10s linear infinite;
+
+filter:drop-shadow(0 0 8px silver);
+
+}
+
+.batik-left{
+
+left:0;
+
+}
+
+.batik-right{
+
+right:0;
+
+transform:scaleX(-1);
+
+}
+
+@keyframes batikMove{
+
+0%{
+
+background-position:0 0;
+
+}
+
+100%{
+
+background-position:0 180px;
+
+}
+
+}
+
+/* WATERMARK */
+
+.hero-watermark{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:75vw;
+
+max-width:900px;
+
+opacity:.12;
+
+pointer-events:none;
+
+filter:drop-shadow(0 0 50px gold);
+
+animation:putar 100s linear infinite;
+
+}
+
+@keyframes putar{
+
+from{
+
+transform:translate(-50%,-50%) rotate(0deg);
+
+}
+
+to{
+
+transform:translate(-50%,-50%) rotate(360deg);
+
+}
+
+}
+
+/* NAVBAR */
+
+nav{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+z-index:999;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-size:28px;
+
+font-weight:800;
+
+color:#FFD700;
+
+}
+
+.logo img{
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+background:white;
+
+padding:4px;
+
+border:3px solid gold;
+
+box-shadow:
+
+0 0 20px gold,
+0 0 50px rgba(255,215,0,.8),
+0 15px 40px rgba(0,0,0,.6);
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:30px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+nav ul li a:hover{
+
+color:#FFD700;
+
+}
+
+/* CONTENT */
+
+.container{
+
+position:relative;
+
+z-index:10;
+
+width:85%;
+
+margin:auto;
+
+padding-top:150px;
+
+text-align:center;
+
+}
+
+.title img{
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+background:white;
+
+padding:8px;
+
+border:3px solid gold;
+
+box-shadow:
+
+0 0 20px gold,
+0 0 60px rgba(255,215,0,.8),
+0 20px 50px rgba(0,0,0,.7);
+
+animation:logoFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes logoFloat{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+.title h3{
+
+margin-top:20px;
+
+color:#FFD700;
+
+letter-spacing:5px;
+
+}
+
+.title h1{
+
+font-size:60px;
+
+margin-top:15px;
+
+text-shadow:
+
+0 0 20px gold,
+0 0 40px gold;
+
+}
+
+.card{
+
+margin-top:40px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(20px);
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:0 0 30px rgba(255,215,0,.2);
+
+}
+
+.card h2{
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:18px;
+
+line-height:2;
+
+text-align:justify;
+
+margin-bottom:15px;
+
+}
+
+/* BUTTON */
+
+.button{
+
+margin-top:35px;
+
+}
+
+.button a{
+
+padding:15px 35px;
+
+background:#FFD700;
+
+color:black;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+box-shadow:0 0 20px gold;
+
+transition:.4s;
+
+}
+
+.button a:hover{
+
+background:white;
+
+transform:translateY(-5px);
+
+}
+
+/* CURSOR */
+
+.cursor{
+
+position:fixed;
+
+width:24px;
+height:24px;
+
+border:2px solid gold;
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+box-shadow:
+
+0 0 15px gold,
+0 0 30px gold,
+0 0 50px rgba(255,215,0,.8);
+
+z-index:99999;
+
+}
+
+/* ===================== */
+/* TABLET */
+/* ===================== */
+
+@media(max-width:1024px){
+
+.title h1{
+
+font-size:42px;
+
+}
+
+.hero-watermark{
+
+width:80vw;
+
+}
+
+}
+
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+
+@media(max-width:768px){
+
+*{
+
+cursor:auto;
+
+}
+
+.cursor{
+
+display:none;
+
+}
+
+nav{
+
+padding:15px 5%;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+}
+
+.logo img{
+
+width:45px;
+height:45px;
+
+}
+
+nav ul{
+
+gap:12px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+nav ul li a{
+
+font-size:13px;
+
+}
+
+.hero{
+
+background-attachment:scroll;
+
+}
+
+.batik-left,
+.batik-right{
+
+width:80px;
+
+opacity:.08;
+
+}
+
+.hero-watermark{
+
+width:90vw;
+
+}
+
+.container{
+
+width:92%;
+
+padding-top:180px;
+
+}
+
+.title img{
+
+width:110px;
+height:110px;
+
+}
+
+.title h3{
+
+font-size:14px;
+
+letter-spacing:3px;
+
+}
+
+.title h1{
+
+font-size:28px;
+
+line-height:1.4;
+
+}
+
+.card{
+
+padding:25px;
+
+border-radius:20px;
+
+}
+
+.card h2{
+
+font-size:24px;
+
+}
+
+.card p{
+
+font-size:15px;
+
+line-height:1.8;
+
+text-align:left;
+
+}
+
+.button a{
+
+padding:12px 25px;
+
+font-size:14px;
+
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<nav>
+
+<div class="logo">
+
+<img src="poto/pramuka.jpeg">
+
+<span>RACANA POLSRI</span>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">BERANDA</a></li>
+<li><a href="sejarah pramuka.html">SEJARAH RACANA</a></li>
+<li><a href="adat.html">ADAT RACANA</a></li>
+<li><a href="budge.html">BADGE RACANA</a></li>
+<li><a href="Untitled-1.html">STRUKTUR RACANA</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="batik-left"></div>
+
+<div class="batik-right"></div>
+
+<img src="poto/graha.jpeg" class="hero-watermark">
+
+<div class="container">
+
+<div class="title">
+
+<img src="poto/pramuka.jpeg">
+
+<h3>GERAKAN PRAMUKA</h3>
+
+<h1>RACANA POLITEKNIK NEGERI SRIWIJAYA</h1>
+
+</div>
+</div>
+
+</section>
+
+<script>
+
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove",(e)=>{
+
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
+
+});
+
+</script>
+<section class="hero">
+
+<div class="batik-left"></div>
+<div class="batik-right"></div>
+
+<img src="poto/graha.jpeg" class="hero-watermark">
+
+<div class="container">
+
+<div class="title">
+
+<img src="poto/pramuka.jpeg">
+
+<h3>GERAKAN PRAMUKA</h3>
+
+<h1>SEJARAH RACANA POLSRI</h1>
+
+</div>
+
+
+<div class="card">
+
+<h2>Sejarah Racana Politeknik Negeri Sriwijaya</h2>
+
+<p>
+Gerakan Pramuka merupakan wadah pendidikan karakter yang menanamkan nilai kepemimpinan, kemandirian, dan pengabdian kepada masyarakat.
+</p>
+
+<p>
+Berangkat dari semangat tersebut, sekelompok mahasiswa Politeknik Negeri Sriwijaya menggagas terbentuknya komunitas kepramukaan sebagai ruang pembinaan dan pengembangan diri di lingkungan kampus.
+</p>
+
+<p>
+Pramuka Politeknik Negeri Sriwijaya berdiri pada 3 Juni 2017 dan secara administratif disahkan pada 16 September 2021 dengan nama resmi Racana Radja Segentar Alam (03.169) dan Putri Kembang Dadar (03.170).
+</p>
+
+<p>
+Sejak saat itu Racana POLSRI berkembang menjadi wadah pembentukan karakter, kepemimpinan, dan pengabdian bagi mahasiswa.
+</p>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="hero">
+
+<div class="batik-left"></div>
+<div class="batik-right"></div>
+
+<img src="poto/graha.jpeg" class="hero-watermark">
+
+<div class="container">
+
+<div class="title">
+
+<img src="poto/pramuka.jpeg">
+
+<h3>GERAKAN PRAMUKA</h3>
+
+<h1>ADAT RACANA POLSRI</h1>
+
+</div>
+
+<div class="card">
+
+<h2>Adat Racana</h2>
+
+<p>
+Adat Racana adalah seperangkat aturan, norma, dan budaya dalam menjalankan kegiatan kepramukaan di lingkungan Racana Politeknik Negeri Sriwijaya guna menjadi wajah dan moral etika Pramuka Politeknik Negeri Sriwijaya.
+</p>
+
+<h3>SENJATA ADAT</h3>
+
+<p>Kujang</p>
+
+<h3>SUGUHAN ADAT</h3>
+
+<p>Bolu Kojo dan Teh Secang</p>
+
+
+<h2 style="margin-top:60px;">ATURAN ADAT RACANA</h2>
+
+<p>1. Dilarang menggunakan senjata adat tanpa perizinan dari Pemangku Adat.</p>
+<p>2. Dilarang berbicara kasar saat menggunakan seragam Pramuka atau berada di sekretariat.</p>
+<p>3. Dilarang merokok di dalam sekretariat dan lingkungannya.</p>
+<p>4. Dilarang merokok saat menggunakan atribut Racana.</p>
+<p>5. Dilarang mencemarkan nama baik Racana.</p>
+<p>6. Dilarang Mengotori Kesekretariatan.</p>
+<p>7. Bagi Anggota Yang Sudah Mendapatkan Budge Racana, Apabila Tidak Menggunakannya Maka Akan Dihapus Sebagai Anggota 
+      Tetap Dan Dikembalikan Ke Tamu Racana.</p>
+<p>8. Diwajibkan Untuk Bertegur Sapa Jika Bertemu Atau Berpapasan/5S (Senyum, Salam, Sopan, Sapa, dan Santun) Untuk 
+      Anggota Pramuka.</p>
+<p>9. Menaati Semua Aturan Yang Telah Dibuat Oleh Dewan Racana.</p>
+<p>10. Pemberian Sanksi Untuk Pelanggaran Diputuskan Melalui Sidang Dewan Racana.</p>
+
+<p>Segala Hal Yang Melanggar Norma, Mencoreng Etika Dan Merusak Moral Berarti Melanggar Pula Peraturan Adat Racana</p>
+</div>
+</div>
+</section>
+</body>
+</html>
+
+</div>
+
+</div>
+
+</section>
+<section class="hero">
+
+<div class="batik-left"></div>
+<div class="batik-right"></div>
+
+<img src="poto/graha.jpeg" class="hero-watermark">
+
+<div class="container">
+
+<div class="title">
+
+<img src="poto/pramuka.jpeg">
+
+<h3>GERAKAN PRAMUKA</h3>
+
+<h1>BADGE RACANA POLSRI</h1>
+
+</div>
+
+
+<div class="card">
+
+<h2>Badge Racana Politeknik Negeri Sriwijaya</h2>
+
+<img src="poto/pramuka.jpeg" class="badge-img">
+
+<p>
+Badge Racana merupakan identitas dan simbol kehormatan yang
+mencerminkan jati diri, semangat, serta nilai-nilai yang
+dijunjung tinggi oleh anggota Racana Politeknik Negeri Sriwijaya.
+</p>
+
+<p>
+Setiap unsur yang terdapat pada badge memiliki makna filosofis
+yang menggambarkan karakter, persatuan, pengabdian, dan
+pengamalan nilai-nilai kepramukaan dalam kehidupan sehari-hari.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>Makna Badge</h2>
+
+<div class="makna">
+
+<div class="item">
+<h4>⚜ Lambang Pramuka</h4>
+<p>
+<b>1. Bunga</b><br>
+Melambangkan tempat bernaungnya komunitas Pramuka di Politeknik Negeri Sriwijaya.
+</p>
+
+<p>
+<b>2. Jembatan Ampera</b><br>
+Melambangkan simbol kemakmuran serta identitas daerah bagi Pramuka POLSRI.
+</p>
+
+<p>
+<b>3. Dua Tunas Kelapa</b><br>
+Melambangkan bahwa Pramuka POLSRI memiliki dua satuan yaitu Putra dan Putri.
+</p>
+
+<p>
+<b>4. Ikatan Simpul</b><br>
+Melambangkan ikatan kekeluargaan yang kuat antar anggota.
+</p>
+
+<p>
+<b>5. WOSM</b><br>
+Melambangkan bahwa Pramuka berada di bawah organisasi kepanduan dunia.
+</p>
+
+<p>
+<b>6. Pisau Belatih</b><br>
+Melambangkan pusaka adat serta kesiapan menghadapi tantangan kehidupan.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Struktur Organisasi Racana POLSRI</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(
+rgba(0,0,0,.88),
+rgba(0,0,0,.88)
+),
+url("ampera.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+overflow-x:hidden;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+position:sticky;
+top:0;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 40px;
+
+background:rgba(0,0,0,.70);
+
+backdrop-filter:blur(15px);
+
+border-bottom:2px solid gold;
+
+z-index:999;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo img{
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+background:white;
+
+padding:3px;
+
+border:2px solid gold;
+
+}
+
+.logo h2{
+
+color:#FFD700;
+
+}
+
+.menu{
+
+display:flex;
+gap:25px;
+list-style:none;
+
+}
+
+.menu a{
+
+text-decoration:none;
+color:white;
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:#FFD700;
+
+}
+
+/* HEADER */
+
+.header{
+
+text-align:center;
+
+padding:80px 20px;
+
+}
+
+.header-logo{
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+padding:8px;
+
+background:white;
+
+border:5px solid gold;
+
+box-shadow:
+0 0 25px gold,
+0 0 50px rgba(255,215,0,.8);
+
+margin-bottom:25px;
+
+animation:float 4s ease infinite;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+.header h3{
+
+letter-spacing:5px;
+
+color:#FFD700;
+
+}
+
+.header h1{
+
+font-size:48px;
+
+margin-top:10px;
+
+text-shadow:0 0 15px gold;
+
+}
+
+.divider{
+
+width:320px;
+
+height:3px;
+
+margin:25px auto;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+gold,
+transparent
+);
+
+}
+
+/* WRAPPER */
+
+.wrapper{
+
+width:95%;
+max-width:1400px;
+
+margin:auto;
+
+}
+
+/* PANEL */
+
+.panel{
+
+padding:60px;
+
+margin-bottom:60px;
+
+border-radius:30px;
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,215,0,.3);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.4);
+
+}
+
+.putra{
+
+background:
+linear-gradient(
+135deg,
+rgba(0,48,107,.88),
+rgba(5,15,35,.95)
+);
+
+}
+
+.putri{
+
+background:
+linear-gradient(
+135deg,
+rgba(88,24,119,.88),
+rgba(20,15,45,.95)
+);
+
+}
+
+.judul{
+
+text-align:center;
+margin-bottom:40px;
+
+}
+
+.judul h2{
+
+font-size:38px;
+color:#FFD700;
+
+}
+
+.judul p{
+
+font-size:18px;
+margin-top:8px;
+
+}
+
+/* PEMBINA */
+
+.pembina{
+
+text-align:center;
+
+}
+
+.pembina img{
+
+width:180px;
+height:180px;
+
+border-radius:50%;
+object-fit:cover;
+
+border:5px solid gold;
+
+box-shadow:0 0 25px gold;
+
+}
+
+.nama{
+
+display:inline-block;
+
+padding:12px 28px;
+
+margin-top:15px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid gold;
+
+border-radius:10px;
+
+font-weight:600;
+
+}
+
+.vertical{
+
+width:4px;
+height:60px;
+
+background:gold;
+
+margin:20px auto;
+
+}
+
+/* KETUA */
+
+.ketua{
+
+text-align:center;
+
+}
+
+.ketua img{
+
+width:230px;
+height:230px;
+
+border-radius:50%;
+object-fit:cover;
+
+border:5px solid gold;
+
+box-shadow:0 0 30px gold;
+
+}
+
+.ketua h4{
+
+margin-top:20px;
+
+font-size:22px;
+
+color:#FFD700;
+
+}
+
+.connector{
+
+position:relative;
+
+width:4px;
+height:60px;
+
+background:gold;
+
+margin:20px auto;
+
+}
+
+.connector::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+bottom:0;
+
+transform:translateX(-50%);
+
+width:550px;
+height:3px;
+
+background:gold;
+
+}
+
+/* PENGURUS */
+
+.officers{
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+}
+
+.card{
+
+width:280px;
+
+padding:30px;
+
+border-radius:25px;
+
+text-align:center;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,215,0,.3);
+
+backdrop-filter:blur(10px);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 25px gold;
+
+}
+
+.card img{
+
+width:140px;
+height:140px;
+
+border-radius:50%;
+
+border:4px solid gold;
+
+object-fit:cover;
+
+margin-bottom:15px;
+
+box-shadow:0 0 15px gold;
+
+}
+
+.card h4{
+
+color:#FFD700;
+
+margin-bottom:10px;
+
+}
+
+/* DIVISI */
+
+.divisi-title{
+
+text-align:center;
+
+margin:50px 0 30px;
+
+font-size:30px;
+
+color:#FFD700;
+
+}
+
+.divisi-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+.divisi-card{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:20px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,215,0,.25);
+
+transition:.4s;
+
+}
+
+.divisi-card:hover{
+
+transform:translateY(-5px);
+
+background:rgba(255,215,0,.08);
+
+}
+
+.divisi-card i{
+
+font-size:32px;
+
+color:#FFD700;
+
+}
+
+.divisi-card h4{
+
+color:#FFD700;
+
+margin-bottom:5px;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+.footer h2{
+
+color:#FFD700;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1024px){
+
+.connector::after{
+
+width:380px;
+
+}
+
+.header h1{
+
+font-size:40px;
+
+}
+
+.panel{
+
+padding:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+body{
+
+background-attachment:scroll;
+
+}
+
+.navbar{
+
+padding:15px;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.menu{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+.menu a{
+
+font-size:14px;
+
+}
+
+.logo{
+
+text-align:center;
+
+}
+
+.logo img{
+
+width:50px;
+height:50px;
+
+}
+
+.logo h2{
+
+font-size:22px;
+
+}
+
+.header{
+
+padding:60px 15px;
+
+}
+
+.header-logo{
+
+width:150px;
+height:150px;
+
+}
+
+.header h3{
+
+font-size:14px;
+
+letter-spacing:3px;
+
+}
+
+.header h1{
+
+font-size:28px;
+
+line-height:1.4;
+
+}
+
+.divider{
+
+width:180px;
+
+}
+
+.panel{
+
+padding:25px;
+
+border-radius:20px;
+
+}
+
+.judul h2{
+
+font-size:28px;
+
+}
+
+.judul p{
+
+font-size:15px;
+
+}
+
+.pembina img{
+
+width:130px;
+height:130px;
+
+}
+
+.ketua img{
+
+width:170px;
+height:170px;
+
+}
+
+.nama{
+
+padding:10px 18px;
+
+font-size:13px;
+
+}
+
+.connector::after{
+
+width:180px;
+
+}
+
+.card{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+.card img{
+
+width:110px;
+height:110px;
+
+}
+
+.divisi-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.divisi-title{
+
+font-size:24px;
+
+}
+
+.footer h2{
+
+font-size:18px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="poto/pramuka.jpeg">
+
+<div>
+
+<h2>RACANA POLSRI</h2>
+
+<small>Politeknik Negeri Sriwijaya</small>
+
+</div>
+
+</div>
+
+<ul class="menu">
+
+<li><a href="index.html">BERANDA</a></li>
+<li><a href="sejarah pramuka.html">SEJARAH RACANA</a></li>
+<li><a href="adat.html">ADAT RACANA</a></li>
+<li><a href="budge.html">BADGE RACANA</a></li>
+<li><a href="Untitled-1.html">STRUKTUR RACANA</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HEADER -->
+
+<div class="header">
+
+<img src="poto/pramuka.jpeg"
+class="header-logo">
+
+<h3>STRUKTUR ORGANISASI</h3>
+
+<h1>RACANA POLITEKNIK NEGERI SRIWIJAYA</h1>
+
+<div class="divider"></div>
+
+</div>
+
+<div class="wrapper">
+
+<section class="panel putra">
+
+<div class="judul">
+
+<h2>RACANA PUTRA</h2>
+
+<p>RAJA SEGENTAR ALAM</p>
+
+</div>
+
+<div class="pembina">
+
+<img src="poto/pembina-putra.jpg">
+
+<h4>PEMBINA</h4>
+
+<div class="nama">Joni Pratama, S.Pd. i., M.Pd.</div>
+
+<div class="vertical"></div>
+
+</div>
+
+<div class="ketua">
+
+<img src="poto/KETUA PA.jpeg">
+
+<h4>KETUA RACANA</h4>
+
+<div class="nama">A RAHMAN FAQIH</div>
+
+</div>
+
+<div class="connector"></div>
+
+<div class="officers">
+
+<div class="card">
+
+<img src="poto/sekretaris-putra.jpg">
+
+<h4>SEKRETARIS UMUM</h4>
+
+<p>ALVI DWI YUNANDA</p>
+
+</div>
+
+<div class="card">
+
+<img src="poto/bendahara-putra.jpg">
+
+<h4>BENDAHARA UMUM</h4>
+
+<p>AGUNG PRAMBADY</p>
+
+</div>
+
+<div class="card">
+
+<img src="poto/adat-putra.jpg">
+
+<h4>PEMANGKU ADAT</h4>
+
+<p>ZAKARIYYA</p>
+
+</div>
+</div>
+
+<div class="divisi-title">DIVISI RACANA PUTRA</div>
+
+<div class="divisi-grid">
+
+<div class="divisi-card">
+<i class="fas fa-camera"></i>
+<div>
+<h4>HUMDOK</h4>
+<p>Hubungan Masyarakat & Dokumentasi</p>
+</div>
+</div>
+
+<div class="divisi-card">
+<i class="fas fa-folder-open"></i>
+<div>
+<h4>KESTARI</h4>
+<p>Kesekretariatan</p>
+</div>
+</div>
+
+<div class="divisi-card">
+<i class="fas fa-book-open"></i>
+<div>
+<h4>MIKAT</h4>
+<p>Minat dan Bakat</p>
+</div>
+</div>
+
+<div class="divisi-card">
+<i class="fas fa-hand-holding-dollar"></i>
+<div>
+<h4>DANUS</h4>
+<p>Dana dan Usaha</p>
+</div>
+</div>
+
+<div class="divisi-card">
+<i class="fas fa-users"></i>
+<div>
+<h4>PSDM</h4>
+<p>Pengembangan Sumber Daya Manusia</p>
+</div>
+</div>
+</div>
+
+</section>
+
+
+
+<!-- RACANA PUTRI -->
+
+<section class="panel putri">
+
+<div class="judul">
+
+<h2>RACANA PUTRI</h2>
+
+<p>PUTRI KEMBANG DADAR</p>
+
+</div>
+
+<div class="pembina">
+
+<img src="poto/pembina-putri.jpg">
+
+<h4>PEMBINA</h4>
+
+<div class="nama">Gemala Cahya, S.Pi., M.Si.</div>
+
+<div class="vertical"></div>
+
+</div>
+
+<div class="ketua">
+
+<img src="poto/ketua-putri.jpg">
+
+<h4>KETUA RACANA</h4>
+
+<div class="nama">DESTA ANJELiA</div>
+
+</div>
+
+<div class="connector"></div>
+
+<div class="officers">
+
+<div class="card">
+<img src="poto/sekretaris-putri.jpg">
+<h4>SEKRETARIS UMUM</h4>
+<p>RIZKY RAHMA DANIYA</p>
+</div>
+
+<div class="card">
+<img src="poto/bendum pi.JPEG">
+<h4>BENDAHARA UMUM</h4>
+<p>MARTA</p>
+</div>
+
+<div class="card">
+<img src="poto/adat-putri.jpg">
+<h4>PEMANGKU ADAT</h4>
+<p>NIA AGUSTINA</p>
+</div>
+
+</div>
+
+<div class="divisi-title">DIVISI RACANA PUTRI</div>
+
+<div class="divisi-grid">
+
+<div class="divisi-card">
+<i class="fas fa-camera"></i>
+<div>
+<h4>HUMDOK</h4>
+<p>Hubungan Masyarakat & Dokumentasi</p>
+</div>
+</div>
+
+<div class="divisi-card">
+<i class="fas fa-folder-open"></i>
+<div>
+<h4>KESTARI</h4>
+<p>Kesekretariatan</p>
+</div>
+</div>
+
+<div class="divisi-card">
+<i class="fas fa-book-open"></i>
+<div>
+<h4>MIKAT</h4>
+<p>Minat dan Bakat</p>
+</div>
+</div>
+
+<div class="divisi-card">
+<i class="fas fa-hand-holding-dollar"></i>
+<div>
+<h4>DANUS</h4>
+<p>Dana dan Usaha</p>
+</div>
+</div>
+
+<div class="divisi-card">
+<i class="fas fa-users"></i>
+<div>
+<h4>PSDM</h4>
+<p>Pengembangan Sumber Daya Manusia</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<div class="footer">
+
+<h2>"Dari Pramuka Untuk Semua"</h2>
+</div>
+
+</body>
+</html>
+
+</body>
+</html>
